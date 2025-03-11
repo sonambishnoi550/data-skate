@@ -72,7 +72,7 @@ const DataStake = () => {
                             <Image className="mx-auto" src="/assets/images/svg/image-icon.svg" alt="image-icon" width={24} height={24} />
                             <p className="text-black text-center pt-4 pb-1">Paste or drag and drop files here</p>
                             <p className="text-xs text-[#9E9E9E] text-center">
-                                Supports ZIP, WAR, EAR, and Images (Max 10MB)
+                                WAR, ZIP or EAR, file size no more than 10MB
                             </p>
                             <button className="mt-3 bg-[#ED1C24] text-white size-[32px] rounded-[4px]">
                                 <Image className="mx-auto cursor-pointer" src="/assets/images/svg/image-plus-icon.svg" alt="upload-icon" width={13.33} height={13.33} />
