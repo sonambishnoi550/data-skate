@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "./common/Header";
 import Footer from "./common/Footer";
@@ -29,7 +29,7 @@ const MyForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="max-w-xl mx-auto bg-white mt-28 rounded-xl shadow-l px-4 mb-[260px]">
+      <div className="max-w-xl mx-auto bg-white mt-28 rounded-xl shadow-l px-4 mb-[260px] py-6">
         <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">
           Welcome Form
         </h2>
