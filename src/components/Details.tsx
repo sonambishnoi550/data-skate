@@ -39,29 +39,34 @@ const Details = () => {
                 <h2 className="text-2xl font-semibold pb-[34px] lg:text-left text-center">
                     {fileName ? fileName : "No file uploaded"}
                 </h2>
-                <div className="flex max-lg:flex-wrap gap-4 lg:justify-between justify-center">
-                    {DATA_LIST.map((item, index) => (
-                        <div key={index} className={`bg-white py-[19px] px-4 flex items-center gap-4 ${item.maxWidth} rounded-[8px] max-lg:mb-4`}>
-                            <Image src={item.image} alt={item.alt} width={60} height={60} />
-                            <div>
-                                {!item.isButton && <p className="text-black w-[13px] bg-black h-1"></p>}
-                                <p className="font-normal md:text-xl text-base max-w-[365px] xl:mr-16 whitespace-nowrap">{item.label}</p>
-                            </div>
-                            {item.isButton && (
-                                <button className="text-[#ED1C24] font-medium text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4">
-                                    {item.buttonText}
-                                </button>
-                            )}
+                <div className="flex max-lg:flex-wrap justify-between max-md:justify-center">
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
+                        <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
+                        <p className='font-medium md:text-xl text-base max-w-[365px] xl:mr-36'>Complexity of the code</p>
+                        <button className='text-[#ED1C24] font-medium text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4'>HIGH</button>
+                    </div>
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
+                        <Image src="/assets/images/svg/machines.svg" alt='code' width={60} height={60} />
+                        <div>
+                            <p className='text-black w-[13px] bg-black h-1'></p>
+                            <p className='font-normal md:text-xl text-base max-w-[365px] xl:mr-16 whitespace-nowrap mt-2'>No of Machines</p>
                         </div>
-                    ))}
+                    </div>
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
+                        <Image src="/assets/images/svg/pars.svg" alt='code' width={60} height={60} />
+                        <div className=''>
+                            <p className='text-black w-[13px] bg-black h-1'></p>
+                            <p className='font-normal md:text-xl text-base max-w-[365px] xl:mr-16 whitespace-nowrap flex mt-2'>No of Pars</p>
+                        </div>
+                    </div>
                 </div>
                 <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] xl:text-left text-center'>Detailed metrices</h4>
-                <div className="flex flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
-                    <div className="xl:!w-[558px] w-[420px]">
+                <div className="flex max-lg:flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
+                    <div className="xl:!w-[558px] lg:w-[420px] w-full">
                         {MERTICES_LIST.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] cursor-pointer hover:bg-gray-100"
+                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] max-lg:mx-auto w-full cursor-pointer hover:bg-gray-100"
                                 onClick={() => handleMetricClick(item.count, item.title)}
                             >
                                 <p className="font-medium md:text-2xl text-lg bg-[#FFF1F2] size-10 flex items-center justify-center rounded-full">

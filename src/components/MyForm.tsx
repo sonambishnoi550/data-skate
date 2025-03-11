@@ -49,7 +49,7 @@ const MyForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-l px-4">
         <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">
