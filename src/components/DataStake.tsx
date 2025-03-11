@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, DragEvent } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import Image from "next/image";
 import Header from "./common/Header";
 
@@ -7,6 +8,7 @@ const DataStake: React.FC = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const router = useRouter(); // Initialize router
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
@@ -42,6 +44,7 @@ const DataStake: React.FC = () => {
         setSelectedFile(file);
         setTimeout(() => {
             setIsLoading(false);
+            router.push("/read-process/file-data");
         }, 2000);
     };
 
