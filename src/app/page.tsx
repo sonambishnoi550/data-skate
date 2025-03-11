@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <MyForm/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

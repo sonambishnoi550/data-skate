@@ -5,7 +5,7 @@ import Header from './common/Header';
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import Footer from './common/Footer';
-import { DATA_LIST,MERTICES_LIST } from '@/utils/helper';
+import {MERTICES_LIST } from '@/utils/helper';
 
 const Details = () => {
     const searchParams = useSearchParams();
@@ -42,7 +42,7 @@ const Details = () => {
                 <div className="flex max-lg:flex-wrap justify-between max-md:justify-center">
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
-                        <p className='font-medium md:text-xl text-base max-w-[365px] xl:mr-36'>Complexity of the code</p>
+                        <p className='font-medium md:text-xl text-base max-w-[365px] xl:mr-36 ff-syne'>Complexity of the code</p>
                         <button className='text-[#ED1C24] font-medium text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4'>HIGH</button>
                     </div>
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
@@ -60,16 +60,16 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] xl:text-left text-center'>Detailed metrices</h4>
+                <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] md:text-left text-center ff-syne'>Detailed metrices</h4>
                 <div className="flex max-lg:flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
                     <div className="xl:!w-[558px] lg:w-[420px] w-full">
                         {MERTICES_LIST.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] max-lg:mx-auto w-full cursor-pointer hover:bg-gray-100"
+                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] max-md:mx-auto w-full cursor-pointer hover:shadow-xl transition-all duration-700"
                                 onClick={() => handleMetricClick(item.count, item.title)}
                             >
-                                <p className="font-medium md:text-2xl text-lg bg-[#FFF1F2] size-10 flex items-center justify-center rounded-full">
+                                <p className="font-medium md:text-2xl ff-syne text-lg bg-[#FFF1F2] size-10 flex items-center justify-center rounded-full">
                                     {item.count}
                                 </p>
                                 <div className="flex justify-between w-full">
@@ -79,8 +79,8 @@ const Details = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='bg-white rounded-[8px] lg:mt-0 mt-5'>
-                        <Image src="/assets/images/png/circle.png" alt='circle' width={558} height={464} />
+                    <div className='bg-white rounded-[8px]'>
+                        <Image className='pointer-events-none' src="/assets/images/png/circle.png" alt='circle' width={558} height={464} />
                     </div>
                 </div>
             </div>

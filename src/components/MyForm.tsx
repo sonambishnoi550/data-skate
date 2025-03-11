@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Header from "./common/Header";
-
+import Footer from "./common/Footer";
 interface FormData {
   firstName: string;
   lastName: string;
@@ -51,7 +51,7 @@ const MyForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-l px-4">
+      <div className="max-w-xl mx-auto bg-white mt-28 rounded-xl shadow-l px-4 mb-[260px]">
         <h2 className="text-2xl font-bold mb-6 text-gray-700 text-center">
           Welcome Form
         </h2>
@@ -73,12 +73,13 @@ const MyForm: React.FC = () => {
           ))}
           <button
             type="submit"
-            className="w-full text-center bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 mt-4"
+            className="w-full text-center cursor-pointer bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 mt-4"
           >
             Submit
           </button>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 };
