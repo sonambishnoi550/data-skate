@@ -5,7 +5,7 @@ import Header from './common/Header';
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import Footer from './common/Footer';
-import { DATA,MERTICES } from '@/utils/helper';
+import { DATA_LIST,MERTICES_LIST } from '@/utils/helper';
 
 const Details = () => {
     const searchParams = useSearchParams();
@@ -40,7 +40,7 @@ const Details = () => {
                     {fileName ? fileName : "No file uploaded"}
                 </h2>
                 <div className="flex max-lg:flex-wrap gap-4 lg:justify-between justify-center">
-                    {DATA.map((item, index) => (
+                    {DATA_LIST.map((item, index) => (
                         <div key={index} className={`bg-white py-[19px] px-4 flex items-center gap-4 ${item.maxWidth} rounded-[8px] max-lg:mb-4`}>
                             <Image src={item.image} alt={item.alt} width={60} height={60} />
                             <div>
@@ -58,7 +58,7 @@ const Details = () => {
                 <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] xl:text-left text-center'>Detailed metrices</h4>
                 <div className="flex flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
                     <div className="xl:!w-[558px] w-[420px]">
-                        {MERTICES.map((item, index) => (
+                        {MERTICES_LIST.map((item, index) => (
                             <div
                                 key={index}
                                 className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] cursor-pointer hover:bg-gray-100"

@@ -1,4 +1,4 @@
-export const DATA = [
+export const DATA_LIST = [
     {
         image: "/assets/images/svg/code.svg",
         alt: "code",
@@ -22,17 +22,11 @@ export const DATA = [
         maxWidth: "max-w-[267px]"
     }
 ];
-export const MERTICES = [
+export const MERTICES_LIST = [
     { count: 11, title: "No of starter processes" },
     { count: 2, title: "No of Connections" },
     { count: 11, title: "No of process" },
     { count: 27, title: "No of Activities" },
     { count: 5, title: "No of Variables" },
     { count: 2, title: "No of Functions" },
-];
-
-export const FEATURES = [
-    "Works on any device—without installation",
-    "Supports more than 10 file types",
-    "Start reading now—no registration needed"
 ];
