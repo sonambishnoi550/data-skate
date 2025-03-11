@@ -7,7 +7,7 @@ import { AiOutlineFile } from "react-icons/ai";
 import { useRouter } from "next/navigation";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-const FileProcessOnline = () => {
+const DataStake = () => {
     const [files, setFiles] = useState<File[]>([]);
     const [uploading, setUploading] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -132,4 +132,4 @@ const FileProcessOnline = () => {
     );
 };
 
-export default FileProcessOnline;
+export default DataStake;
