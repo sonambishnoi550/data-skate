@@ -37,12 +37,12 @@ const Details = () => {
             <Header />
             <div className="container max-w-[1180px] mx-auto px-4">
                 <div className='flex justify-between py-6'>
-                <h2 className="text-2xl font-semibold pb-[34px] lg:text-left text-center">
+                <h2 className="text-2xl font-semibold pb-[34px] ff-syne lg:text-left text-center">
                     {fileName ? fileName : "No file uploaded"}
                     </h2>
-                    <button className='text-sm font-normal py-2 h-[43px] md:px-[42px] px-5 rounded-[6px] border border-[#0D0D0D80]'>Upload more files</button>
+                    <button className='text-sm font-normal cursor-pointer py-2 h-[43px] md:px-[42px] px-5 rounded-[6px] border border-[#0D0D0D80]'>Upload more files</button>
                 </div>
-                <div className="flex max-lg:flex-wrap justify-between max-md:justify-center">
+                <div className="flex max-lg:flex-wrap justify-between max-md:gap-5 max-md:justify-center">
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
                         <p className='font-medium md:text-xl text-base max-w-[365px] xl:mr-36 ff-syne'>Complexity of the code</p>
@@ -82,7 +82,7 @@ const Details = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='bg-white rounded-[8px]'>
+                    <div className='bg-white rounded-[8px] -mt-5'>
                         <Image className='pointer-events-none' src="/assets/images/png/circle.png" alt='circle' width={558} height={464} />
                     </div>
                 </div>

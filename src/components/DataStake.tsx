@@ -59,7 +59,7 @@ const DataStake = () => {
             <Image className="absolute sm:block hidden left-0 top-[13%] pointer-events-none" src="/assets/images/png/data-left-image.png" alt="left-image" width={169.25} height={211.02} />
             <Image className="absolute sm:block hidden right-0 bottom-[26%] pointer-events-none" src="/assets/images/png/data-right-image.png" alt="left-image" width={169.25} height={211.02} />
             <div className="flex flex-col items-center mb-[69px] px-4">
-                <h2 className="md:text-[32px] text-2xl font-semibold ff-syne text-center mb-[34px] mt-9 ff-syne">
+                <h2 className="md:text-[32px] text-2xl font-semibold text-center mb-[34px] mt-9 ff-syne">
                     Read & process your files online
                 </h2>
                 <div className="bg-white p-4 max-w-[786px] w-full rounded-xl shadow-md">

@@ -43,7 +43,7 @@ const MyForm: React.FC = () => {
                 type={field === "email" ? "email" : "text"}
                 name={field}
                 onChange={handleChange}
-                className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full p-3 rounded-md border border-gray-300"
                 required
               />
             </div>
