@@ -15,36 +15,14 @@ const MyForm: React.FC = () => {
     lastName: "",
     email: "",
   });
-  const [tableData, setTableData] = useState<FormData[]>([]);
   const router = useRouter();
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedData = JSON.parse(localStorage.getItem("userTableData") || "[]");
-      setTableData(storedData);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("userTableData", JSON.stringify(tableData));
-  }, [tableData]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.firstName || !formData.lastName || !formData.email) {
-      alert("Please fill out all fields.");
-      return;
-    }
-    setTableData([...tableData, formData]);
-    setFormData({ firstName: "", lastName: "", email: "" });
+    localStorage.setItem("userData", JSON.stringify(formData));
     router.push("/read-process");
   };
 
@@ -64,7 +42,6 @@ const MyForm: React.FC = () => {
               <input
                 type={field === "email" ? "email" : "text"}
                 name={field}
-                value={formData[field as keyof FormData]}
                 onChange={handleChange}
                 className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 required
@@ -79,7 +56,7 @@ const MyForm: React.FC = () => {
           </button>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
