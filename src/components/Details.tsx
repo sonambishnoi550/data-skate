@@ -39,7 +39,7 @@ const Details = () => {
                     </h2>
                     <button className='text-sm font-normal cursor-pointer py-2 h-[43px] md:px-[42px] px-5 rounded-[6px] border border-[#0D0D0D80]'>Upload more files</button>
                 </div>
-                <div className="flex max-lg:flex-wrap justify-between max-md:gap-5 max-md:justify-center">
+                <div className="flex max-lg:flex-wrap justify-between max-lg:gap-5 max-lg:justify-center">
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
                         <p className='font-medium md:text-xl text-base max-w-[365px] md:whitespace-nowrap xl:mr-36 ff-syne'>Complexity of the code</p>
@@ -60,13 +60,13 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] md:text-left text-center ff-syne'>Detailed metrices</h4>
-                <div className="flex max-lg:flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
-                    <div className="xl:!w-[558px] lg:w-[420px] w-full">
+                <h4 className='font-semibold text-2xl pt-[31.93px] pb-[24.07px] lg:text-left text-center ff-syne'>Detailed metrices</h4>
+                <div className="flex  max-lg:flex-wrap xl:gap-6 items-center pb-[46px] lg:justify-between justify-center">
+                    <div className="xl:!w-[558px] max-lg:pb-10 lg:w-[420px] w-full">
                         {MERTICES_LIST.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] max-md:mx-auto w-full cursor-pointer hover:shadow-xl transition-all duration-700"
+                                className="flex bg-white py-3 px-4 mb-4 rounded-[8px] items-center gap-4 max-w-[558px] max-lg:mx-auto w-full cursor-pointer hover:shadow-xl transition-all duration-700"
                                 onClick={() => handleMetricClick(item.count, item.title)}
                             >
                                 <p className="font-medium md:text-2xl ff-syne text-lg bg-[#FFF1F2] size-10 flex items-center justify-center rounded-full">
