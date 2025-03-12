@@ -50,7 +50,7 @@ const MyForm: React.FC = () => {
           ))}
           <button
             type="submit"
-            className="w-full text-center cursor-pointer bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 mt-4"
+            className=" text-center cursor-pointer px-6 mx-auto flex bg-blue-500 text-white py-3 rounded-lg hover:scale-110 transition-all duration-700"
           >
             Submit
           </button>

@@ -18,9 +18,6 @@ const Details = () => {
             setFileName(storedFileName);
         }
     }, []);
-
-    const metricCount = searchParams.get("metric") || "";
-
     const handleMetricClick = (count: number, title: string) => {
         const params = new URLSearchParams(searchParams.toString());
 
