@@ -38,7 +38,6 @@ const DataStake = () => {
 
             const fileNames = acceptedFiles.map(file => file.name);
             localStorage.setItem("uploadedFiles", JSON.stringify(fileNames));
-            localStorage.setItem("uploadedFileName", fileNames[0]);
             const interval = setInterval(() => {
                 setProgress((oldProgress) => {
                     if (oldProgress >= 100) {

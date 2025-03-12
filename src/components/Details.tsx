@@ -34,25 +34,25 @@ const Details = () => {
             <Header />
             <div className="container max-w-[1180px] mx-auto px-4">
                 <div className='flex justify-between py-6'>
-                <h2 className="text-2xl font-semibold pb-[34px] ff-syne lg:text-left text-center">
+                <h2 className="md:text-2xl text-lg font-semibold pb-[34px] ff-syne lg:text-left text-center">
                     {fileName ? fileName : "No file uploaded"}
                     </h2>
                     <button className='text-sm font-normal cursor-pointer py-2 h-[43px] md:px-[42px] px-5 rounded-[6px] border border-[#0D0D0D80]'>Upload more files</button>
                 </div>
-                <div className="flex max-lg:flex-wrap justify-between max-lg:gap-5 max-lg:justify-center">
-                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
+                <div className="flex max-lg:flex-wrap justify-between max-xl:gap-5 max-lg:justify-center">
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] w-full rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
                         <p className='font-medium md:text-xl text-base max-w-[365px] md:whitespace-nowrap xl:mr-36 ff-syne'>Complexity of the code</p>
                         <button className='text-[#ED1C24] font-medium cursor-pointer text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4'>HIGH</button>
                     </div>
-                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 md:max-w-[267px] w-full rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/machines.svg" alt='code' width={60} height={60} />
                         <div>
                             <p className='text-black w-[13px] bg-black h-1'></p>
                             <p className='font-normal md:text-xl text-base max-w-[365px] xl:mr-16 whitespace-nowrap mt-2'>No of Machines</p>
                         </div>
                     </div>
-                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
+                    <div className='bg-white py-[19px] px-4 flex items-center gap-4 md:max-w-[267px] w-full rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/pars.svg" alt='code' width={60} height={60} />
                         <div className=''>
                             <p className='text-black w-[13px] bg-black h-1'></p>
