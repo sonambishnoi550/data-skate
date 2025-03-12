@@ -43,7 +43,7 @@ const Details = () => {
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[558px] rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/code.svg" alt='code' width={60} height={60} />
                         <p className='font-medium md:text-xl text-base max-w-[365px] md:whitespace-nowrap xl:mr-36 ff-syne'>Complexity of the code</p>
-                        <button className='text-[#ED1C24] font-medium text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4'>HIGH</button>
+                        <button className='text-[#ED1C24] font-medium cursor-pointer text-sm border border-[#ED1C24] rounded-[49px] bg-[#FFF1F2] py-2 px-4'>HIGH</button>
                     </div>
                     <div className='bg-white py-[19px] px-4 flex items-center gap-4 max-w-[267px] rounded-[8px] max-lg:mb-4'>
                         <Image src="/assets/images/svg/machines.svg" alt='code' width={60} height={60} />
